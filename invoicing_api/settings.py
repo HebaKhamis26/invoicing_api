@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@=d$%xsedffn$bv+0rn!@elxnc$s^7@gp1u_akb0-&^154b%&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['invoicing_api.onrender.com']
+ALLOWED_HOSTS = ['invoicing_api.herokuapp.com', 'localhost']
 
 
 # Application definition
