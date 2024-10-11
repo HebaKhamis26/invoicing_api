@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@=d$%xsedffn$bv+0rn!@elxnc$s^7@gp1u_akb0-&^154b%&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['invoicing_api.onrender.com']
 
 
 # Application definition
@@ -82,14 +82,7 @@ WSGI_APPLICATION = 'invoicing_api.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'invoiceapidb',
-        'USER': 'postgres',    
-        'PASSWORD': '123456',
-        'HOST': 'localhost',   
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
 
 
